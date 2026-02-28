@@ -44,6 +44,8 @@ Non-Companion devices can automatically advertize their information to other use
 - Auto Advert (Zero Hop): 60 Minutes
 - Auto Advert (Flood): 3 Hours
 
+## In App Tools
+- Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
 
 ## Messaging
 
