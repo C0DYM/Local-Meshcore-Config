@@ -13,6 +13,8 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 
 ---
 
+## ⚠️Caution: Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.**⚠️
+
 ## Table of Contents
 - [Purpose](#purpose)
 - [Quick Start](#quick-start)
@@ -29,12 +31,11 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 ---
 
 ### Quick Start (Companion / Personal Node)
-1. **Caution: Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.**
-2. **Set Preset:** USA/Canada
-3. **Change Coding Rate:** 8 
-4. **Set your device name**
-5. **Discover Repeaters** **Tools → Discover Nearby Nodes**
-6. **Send a message to the Public room**
+1. **Set Preset:** USA/Canada
+2. **Change Coding Rate:** 8 
+3. **Set your device name**
+4. **Discover Repeaters** **Tools → Discover Nearby Nodes**
+5. **Send a message to the Public room**
 
 ### Quick Start (Repeater / Room Server)
 1. **Connect to newly flashed repeater over USB**
