@@ -23,13 +23,15 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 - [Contacts](#contacts-companion)
 - [Repeat Mode](#companion-repeat-mode-advanced-️)
 - [Troubleshooting](#troubleshooting-common-issues)
+
 ## Quick Start
 
 ---
 
 ### Quick Start (Companion / Personal Node)
-1. **Set Preset:** USA/Canada
-2. **Change Coding Rate to 8** 
+1. **Caution: Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.**
+2. **Set Preset:** USA/Canada
+3. **Change Coding Rate:** 8 
 4. **Set your device name**
 5. **Discover Repeaters** **Tools → Discover Nearby Nodes**
 6. **Send a message to the Public room**
@@ -37,8 +39,8 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 ### Quick Start (Repeater / Room Server)
 1. **Connect to newly flashed repeater over USB**
 1. **Set Preset:** USA/Canada
-2. **Change Coding Rate to 8** 
-3. **Set Advert Intervals** - 60 Min / 3 Hour
+2. **Change Coding Rate:** 8 
+3. **Set Advert Intervals:** 60 Min / 3 Hour
 4. Verify discovery via **Tools → Discover Nearby Nodes** from a companion
 
 ---
@@ -63,13 +65,12 @@ Some menu items only appear on companions, repeaters, or room servers.
 
 ## Required Local Settings
 
-### Radio Settings (All Devices) ✅ Required
-1. Press the **gear icon** (upper right)  
-2. Find **Choose Preset**  
-3. Select **USA/Canada**  
-4. Set the radio values below:
+### Radio Settings (All Devices)
+1. Find **Choose Preset**  
+2. Select **USA/Canada**  
+3. Set the radio values below:
 
-**Emerald Coast RF Profile (Required)**
+**Emerald Coast RF Profile**
 
 | Setting | Value |
 |---|---|
@@ -80,23 +81,23 @@ Some menu items only appear on companions, repeaters, or room servers.
 | Transmit Power | **22 dBm** |
 
 **Note on transmit power (SX1262):**  
-The LoRa transceiver (SX1262) has a **max TX power of 22 dBm**. If your device has an embedded amplifier, the additional gain is not shown in the app. Setting **22 dBm** should max the radio’s configured output, but the real radiated power can be higher depending on hardware.
+The LoRa transceiver (SX1262) has a **max TX power of 22 dBm**. If your device has an embedded amplifier, the additional gain is not shown in the app. Setting **22 dBm** should max the lora transceiver’s Tx output, but the actual radiated power may be higher depending on hardware.
 
-### Defaults and Coding Rate ⭐ Recommended (for now)
-Most settings can remain at defaults — the key local recommendation is **Coding Rate = 8**.
+### Defaults and Coding Rate
+Most settings can remain at defaults — the local recommendation is **Coding Rate = 8**.
 
-Increasing Coding Rate from **5 → 8** applies additional error correction to improve long-range links and resist noise, at the cost of data speed. If the region becomes saturated with devices later, we may reduce Coding Rate to limit congestion.
+Increasing Coding Rate from **5 → 8** applies additional error correction to improve long-range links and resist noise, at the cost of data speed. If the region becomes saturated with devices later, we may reduce Coding Rate to improve efficiency.
 
-**Compatibility note:** It may be possible for devices to communicate when Coding Rate differs, but **best practice is to match CR=8** for consistent reliability across the mesh.
+**Note:** Devices can communicate when Coding Rate differs, but best practice is to match CR=8 for consistent performance across the mesh.
 
-### Companion Repeat Mode (leave OFF) ⚠️ Advanced
+### Companion Repeat Mode ⚠️ Advanced
 **Leave Companion Repeat Mode OFF** unless you are coordinating a Meshtastic-style, ad-hoc operation (details in the Repeat Mode section).
 
 ---
 
 ## Public Info (All Devices)
 
-### Node Naming ⭐ Recommended
+### Node Naming
 You will probably want to change the name of your companion device. This is optional but recommended. Use a prefix so others can identify which devices you own.
 
 Examples:
@@ -116,10 +117,10 @@ An **advert** is a periodic broadcast of a node’s public info so other users c
 
 Non-companion devices can automatically advertise their information to the mesh. These values are recommended while our mesh is still growing so repeaters and room servers are easier to discover.
 
-- **Zero Hop adverts**: only reach nodes in direct range; they **do not repeat**.  
+- **Zero Hop adverts**: only reach nodes in direct range; they **do not get repeated**.  
 - **Flood adverts**: propagate through repeaters across the mesh.
 
-In very dense areas, some communities recommend flood adverts at **24 hours or more**. We’re not at that density yet, so these lower intervals are fine for now and can be increased later.
+In very dense areas, some communities recommend flood adverts at **24 hours or more**. We’re not at that density yet, so these lower intervals are fine for now and can be increased later if needed.
 
 ### Recommended Advert Settings ⭐ Recommended
 | Advert type | Interval |
@@ -137,32 +138,26 @@ In very dense areas, some communities recommend flood adverts at **24 hours or m
 3. For initial pairing:  
    - Devices with screens display a **6-digit** code on the main screen.  
    - If you don’t see it, press the **user button** to cycle screens.  
-   - Devices without displays often use **123456** (common default).  
-4. If you get a red warning message after first connect:  
+   - Devices without displays often use **123456**.  
+4. If you get a red warning message after first connection:  
    - Close the MeshCore app completely  
    - Re-launch it  
    - The radio should connect and begin syncing
 
-> Replace the line below with your actual image path if publishing on GitHub:
->
-> `![Bluetooth Connect screen](path-or-url-to-image.png)`
-
 ---
 
-## More Options Menu (⋮ / “kebab menu”)
+## Options Menu **⋮**
 
 ### Tools
-- **Tools → Discover Nearby Nodes**  
-  Sends an advert and listens for responding repeaters or sensors.  
-  ✅ **Recommended first step** after you configure your device.
+- **Discover Nearby Nodes**  
+  Sends an advert and listens for responding repeaters or sensors. **Recommended first step** after you configure your device.
 
 - **Internet Map**  
-  Shows nodes whose details have been uploaded.  
-  ⭐ Recommended to finish configuration—especially **location settings**—before sharing.
+  Shows nodes whose details have been uploaded. This differs from your local map, which only shows local contacts you've added.
 
 ---
 
-## Contacts (Companion)
+## Contacts
 
 ### Adding contacts (⋮ → Add Contact)
 This allows manual contact adding, rather than waiting for an advert. There are multiple ways to import:
@@ -178,10 +173,10 @@ This allows manual contact adding, rather than waiting for an advert. There are 
   Great for in-person meetups and adding private channels.
 
 - **Internet Map**  
-  Find a repeater and add it to contacts before you hear an advert.  
+  Find a repeater and add it to your contacts before you hear an advert.  
   Note: this doesn’t make it work unless you’re actually in range—**Discover Nearby Nodes** is often the better strategy.
 
-### Managing contacts ⭐ Recommended tips
+### Managing contacts - Recommended tips
 - In the **Contacts tab** (lower left), you can search, filter, and sort your contacts.
 - You can set a **custom name** for someone else’s node:  
   open their **⋮** → **Details** → edit name with the **pencil** icon.  
@@ -200,10 +195,9 @@ To manually add contacts:
 ---
 
 ## Messaging
-- Users can send messages to the **Public Channel** where all companions receive a copy.  
+- Users can send messages to the **Public Channel** where all companions in the mesh receive a copy.  
 - **Private channels** can be created to provide an encrypted channel for multiple companions to join.  
-- **Direct messaging** is supported, but both devices must have each other added as a contact.  
-  Blind messaging does not work.
+- **Direct messaging** will send a message through the mesh to the other companion and provide a delivery receipt. Note: Each device must have each other added as a contact to DM.
 
 ---
 
@@ -212,28 +206,26 @@ To manually add contacts:
 
 By default, MeshCore companions **do not relay** other users’ traffic. This reduces congestion and relies on dedicated repeaters/room servers for forwarding.
 
-**Repeat Mode** makes a companion behave more like Meshtastic’s flooding strategy (more devices relaying packets), which can help in temporary off-grid situations but can also increase congestion and duplicates in a fixed infrastructure mesh.
+**Repeat Mode** makes a companion behave more like Meshtastic’s flooding strategy (more devices relaying packets), which can help in temporary off-grid situations.
 
 MeshCore’s standard routing architecture is optimized for fixed-node meshes and supports up to **64 hops** (compared to **7** on Meshtastic), which is one reason the default behavior avoids flooding from every handheld.
 
-### Repeat Mode requirements (must coordinate)
+### Repeat Mode requirements
 If you enable companion Repeat Mode:
 - You must use **918 MHz** when Repeat Mode is enabled  
 - You must **type it in** and apply the settings  
 - You must coordinate and match settings with the other users you want to mesh with  
-
-> ⚠️ This is not intended for everyday use on the Emerald Coast mesh profile unless the community explicitly standardizes it.
 
 ---
 
 ## Join Test (Verify Your Setup)
 After saving settings and rebooting:
 
-### Basic checks ✅
+### Basic checks
 - You can connect in the app without errors (or errors clear after an app restart)
 - Run **Tools → Discover Nearby Nodes**
-- You see at least one nearby repeater/room server (if you’re in range)
-- Send a test message in the Public Channel and confirm someone receives/replies
+- You see at least one nearby repeater/room server (if in range)
+- Send a test message in the Public Channel and see if additional nodes repeat your message "Heard 2 Repeats"
 
 ---
 
@@ -242,12 +234,15 @@ After saving settings and rebooting:
 ### “I can’t connect / radio won’t pair”
 - Ensure the radio is not connected to another phone/computer
 - Try closing the app completely and relaunching
+- Power Cycle the radio using a reset button (if available)
 - Confirm pairing code screen (cycle device screens with the user button)
+- Delete the bluetooth device from your phone's bluetooth settings
+- Turn bluetooth off on your phone, wait a minute and turn it back on
 - For no-display devices, try **123456** (if your hardware uses that default)
 
 ### “Discover Nearby Nodes finds nothing”
 - Re-check the **Required RF Profile** values (frequency/bandwidth/SF/CR)
-- Move outdoors or near a window
+- Ensure you have an antenna attached to the correct RF port
 - Verify you saved settings and the radio rebooted
 
 ### “I can see nodes but DMs don’t work”
