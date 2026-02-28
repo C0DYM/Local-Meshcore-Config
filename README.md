@@ -13,7 +13,7 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 
 ---
 
-## ⚠️Caution: Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.**⚠️
+## ⚠️Caution: Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.**
 
 ## Table of Contents
 - [Purpose](#purpose)
