@@ -22,13 +22,15 @@ Certain menu items are only available on either companions or repeaters/room ser
 - Press the gear icon in the upper right corner of the screen
 - Find the Choose Preset button
 - Select USA/Canada
-- Change the Radio Settings to the following (press each number to change it):
+- Change the Radio Settings to the following:
   - Frequency: 910.525 MHz
   - Bandwidth: 62.5 kHz
   - Spreading Factor: 7
   - **Coding Rate: 8**
-
-The only recommended modification is to the Coding Rate. By inreasing from 5 -> 8, additional error corrections are implemented to improve long range connections and resist noise at the cost of data speed. In the future the area may get saturated with devices; This recommendation would change to a lower value to reduce congestion. Devices CAN communicate with eachother when the Coding Rate value is different. Do not Enable Repeat Mode (Only a companion option) unless you do not want to participate in the mesh. More on this below.
+  - Transmit Power (dBm): 22
+      - The lora transceiver (sx1262) has a max transmit power of 22dBm. If you have a device with an embedded amplifier, the additional gain from that is not shown. Setting it to 22 _should_ max your device's transmit power.
+ 
+Most settings can stay at defaults - the main recommendation is to the Coding Rate. By inreasing from 5 -> 8, additional error correction is applied to improve long range connections and resist noise at the cost of data speed. In the future the area may get saturated with devices; This recommendation would change to a lower value to reduce congestion. Devices CAN communicate with eachother when the Coding Rate value is different. Do not Enable Repeat Mode (Only a companion option) unless you do not want to participate in the mesh. More on this below.
 
 ### Public Info - All Devices
 You will probably want to change the name of your companion device. It is optional but recommended to use some sort of prefix to identify which devices you own. Examples:
