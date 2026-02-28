@@ -50,7 +50,11 @@ Non-Companion devices can automatically advertize their information to other use
 
 
 ### Contacts
-- Menu ⋮ -> Add Contact: 
+- Menu ⋮ -> Add Contact: This allows for manual contact adding, in lieu of waiting for an advert. There are 3 ways to import a contact.
+  - Manual: You will need to choose the contact type (Chat, Repeater, Room Server, or Sensor) along with the name and Public Key.
+  - Import from Clipboard Link: Most common method for sharing over text messages to friends. Copy the URL provided, and the import button will paste it from your clipboard and add the contact. You can import repeaters, room servers, companions, and private channels.
+   - Scan a QR Code: Exactly what it sounds like. Good for in person meetups, for adding private channels.
+   - Internet Map: Check out the area and click on a repeater, you can add it to your contacts before hearing an advert. This won't make it work unless you're in range, which a "Discover Nearby Nodes" may be a better strategy.
 
 ### Messaging
 
