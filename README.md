@@ -16,6 +16,8 @@ This guide helps new users configure their radios to match the **Emerald Coast**
 ## ⚠️ Caution ⚠️
 Equipment damage may occur if a proper antenna is not attached before powering on any Meshcore radio.
 
+---
+
 ## Table of Contents
 - [Purpose](#purpose)
 - [Quick Start](#quick-start)
@@ -23,13 +25,13 @@ Equipment damage may occur if a proper antenna is not attached before powering o
 - [Public Info](#public-info-all-devices)
 - [Advert Intervals](#advert-intervals-repeater--room-server-only)
 - [App Usage](#ios--android--web-app-usage)
-- [Contacts](#contacts-companion)
+- [Contacts](#contacts)
 - [Repeat Mode](#companion-repeat-mode-advanced-️)
 - [Troubleshooting](#troubleshooting-common-issues)
 
-## Quick Start
-
 ---
+
+## Quick Start
 
 ### Quick Start (Companion / Personal Node)
 1. **Set Preset:** USA/Canada
