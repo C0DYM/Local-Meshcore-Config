@@ -48,6 +48,9 @@ Non-Companion devices can automatically advertize their information to other use
 
 ### Connecting
 
+<img width="347" height="158" alt="Screenshot 2026-02-27 at 22 59 03" src="https://github.com/user-attachments/assets/9e754df7-0e38-4f01-8838-e30d50669f9a" />
+
+
 ### Menu ⋮ 
 - Tools -> Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
 - Internet Map: This will show nodes who's details have been uploaded. It is recommended to finish configuring the devices, particularly the location before sharing.
