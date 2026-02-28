@@ -50,6 +50,7 @@ Non-Companion devices can automatically advertize their information to other use
 
 <img width="347" height="158" alt="Screenshot 2026-02-27 at 22 59 03" src="https://github.com/user-attachments/assets/9e754df7-0e38-4f01-8838-e30d50669f9a" />
 
+Press the Bluetooth Connect button. This will open a new page where your Meshcore radio will be waiting to connect, if powered on and not connected to another device. For initial pairing, devices with screens will display their 6 digit code on the main screen. If you don't see it, press the user button to cycle between screens. If the device has no display, the pairing code is usually 123456. The first time it connects, you may get a red warning message. Close the Meshcore app and re-launch it, the radio should connect and start syncing.
 
 ### Menu ⋮ 
 - Tools -> Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
