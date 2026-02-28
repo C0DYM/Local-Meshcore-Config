@@ -26,7 +26,7 @@ Certain menu items are only available on either companions or repeaters/room ser
   - Bandwidth: 62.5 kHz
   - Spreading Factor: 7
   - **Coding Rate: 8**
-  - Do not Enable Repeat Mode, unless you do not want to participate in the mesh
+  - Do not Enable Repeat Mode, unless you do not want to participate in the mesh. More on this below.
 
 The only recommended modification is to the Coding Rate. By inreasing from 5 -> 8, additional error corrections are implemented to improve long range connections and resist noise at the cost of data speed. In the future the area may get saturated with devices; This recommendation would change to a lower value to reduce congestion. Devices CAN communicate with eachother when the Coding Rate value is different. 
 
@@ -55,6 +55,9 @@ Non-Companion devices can automatically advertize their information to other use
   - Import from Clipboard Link: Most common method for sharing over text messages to friends. Copy the URL provided, and the import button will paste it from your clipboard and add the contact. You can import repeaters, room servers, companions, and private channels.
    - Scan a QR Code: Exactly what it sounds like. Good for in person meetups, for adding private channels.
    - Internet Map: Check out the area and click on a repeater, you can add it to your contacts before hearing an advert. This won't make it work unless you're in range, which a "Discover Nearby Nodes" may be a better strategy.
+- In the contacts tab (lower left), you can search, filter, and sort your contacts.
+- You can set a custom name for someone else's contact by clicking on their ⋮ icon, go to details, and edit their name using the pencil icon. You can make a completely custom name, or take their repeater name and add additional information (like discord username, callsign, etc) to it. Only you can see your custom node names.
+- If you do not want all nodes and devices to be auto-added, go to your device settings -> contact settings. disable "Auto Add All", and select the types you wish. To manually add contacts, you must go to ⋮ -> Discover contacts, and add the ones you wish to your contact list. This list is comprised of devices you have received an advert from.
 
 ### Messaging
 
@@ -62,7 +65,10 @@ Non-Companion devices can automatically advertize their information to other use
 - Private channels can be greated to provide an encrypted channel for multiple companions to join.
 - Direct messaging to devices are supported, but both devices must have the other added as a contact. Blind messaging does not work.
 
+## Companion Repeat Mode
+Released in version 1.13.0, repeat mode changes the main functionality of MeshCore to behave like Meshtastic. By default, Meshcore companions do not repeat any messages. Companions do direct message other companions if within range. Meshtastic uses the flood strategy - All devices repeat all packets, regardless of who they originated from - to enable off grid, no-infrastructure messaging with the best chance of message delivery. In larger, fixed node meshs, this strategy can cause excess congestion, inefficient routing, and multiple copies of messages being received. Meshcore has optomized their standard routing archatecture to allow for up to 64 hops compared to 7 on Meshtastic. 
 
+For those times when you need a Meshtastic like capability, you can enable the companion repeat mode. You will have to utilize 918MHz when this mode is enabled, you must type it in and apply the settings. You must coordinate and match settings with other users for the mesh to work.
 
 
 
