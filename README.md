@@ -13,8 +13,8 @@ This guide helps new users configure their radios to match the Emerald Coast mes
 
 Certain menu items are only available on either companions or repeaters/room servers. 
 
-- **Companion**: This is the device that will connenect to your phone or computer via bluetooth/usb.Companions do not re-broadcast received messages like Meshtastic does. 
-- **Repeater**: These devices repeat your companion's message to other devices on the mesh. They have auto-discovery settings not available on other modes.
+- **Companion**: This is the device that will connect to your phone or computer via bluetooth/usb. Companions do not re-broadcast received messages like Meshtastic does. Companions do not auto-advertize, to reduce potential congestion. 
+- **Repeater**: These devices repeat companion messages, telemetry, and management to other devices on the mesh.
 - **Room Server**: You can flash any device to act as a chat room. It can store up to 32 messages, and is a good way to leave messages for users when they are not connected or out of range. Room Servers can also be repeaters when enabled via CLI - But are not advertized as such and are best suited serving a single purpose. 
 
 ### Radio Settings - All Devices
@@ -45,8 +45,11 @@ Non-Companion devices can automatically advertize their information to other use
 - Auto Advert (Flood): 3 Hours
 
 
+## Messaging
 
-
+- Users can send messages to the "Public Channel" where all companions will receive a copy. 
+- Private channels can be greated to provide an encrypted channel for multiple companions to join.
+- Direct messaging to devices are supported, but both devices must have the other added as a contact. Blind messaging does not work.
 
 
 
