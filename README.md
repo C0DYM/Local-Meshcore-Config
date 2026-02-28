@@ -44,10 +44,15 @@ Non-Companion devices can automatically advertize their information to other use
 - Auto Advert (Zero Hop): 60 Minutes
 - Auto Advert (Flood): 3 Hours
 
-## In App Tools
-- Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
+### Menu ⋮ 
+- Tools -> Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
+- Internet Map: This will show nodes who's details have been uploaded. It is recommended to finish configuring the devices, particularly the location before sharing.
 
-## Messaging
+
+### Contacts
+- Menu ⋮ -> Add Contact: 
+
+### Messaging
 
 - Users can send messages to the "Public Channel" where all companions will receive a copy. 
 - Private channels can be greated to provide an encrypted channel for multiple companions to join.
