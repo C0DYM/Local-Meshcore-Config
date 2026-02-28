@@ -69,12 +69,10 @@ Some menu items only appear on companions, repeaters, or room servers.
 
 ## Required Local Settings
 
-### Radio Settings (All Devices)
+### RF Options
 1. Find **Choose Preset**  
 2. Select **USA/Canada**  
 3. Set the radio values below:
-
-**Emerald Coast RF Profile**
 
 | Setting | Value |
 |---|---|
@@ -85,21 +83,19 @@ Some menu items only appear on companions, repeaters, or room servers.
 | Transmit Power | **22 dBm** |
 
 **Note on transmit power (SX1262):**  
-The LoRa transceiver (SX1262) has a **max TX power of 22 dBm**. If your device has an embedded amplifier, the additional gain is not shown in the app. Setting **22 dBm** should max the lora transceiver’s Tx output, but the actual radiated power may be higher depending on hardware.
+The LoRa transceiver has a **max TX power of 22 dBm**. If your device has an embedded amplifier, the additional gain is not shown in the app. Setting **22 dBm** should max the lora transceiver’s Tx output, but the actual radiated power may be higher depending on hardware.
 
 ### Defaults and Coding Rate
-Most settings can remain at defaults — the local recommendation is **Coding Rate = 8**.
+Most settings can remain at defaults — the recommendation is **Coding Rate = 8**.
 
-Increasing Coding Rate from **5 → 8** applies additional error correction to improve long-range links and resist noise, at the cost of data speed. If the region becomes saturated with devices later, we may reduce Coding Rate to improve efficiency.
+Increasing Coding Rate from **5 → 8** applies additional error correction to improve long-range links and resist noise, at the cost of data speed. Devices can communicate when Coding Rate differs, but best practice is to match for consistent performance across the mesh. Rebooting the radio will be necessary to apply the new settings. 
 
-**Note:** Devices can communicate when Coding Rate differs, but best practice is to match CR=8 for consistent performance across the mesh.
-
-### Companion Repeat Mode ⚠️ Advanced
-**Leave Companion Repeat Mode OFF** unless you are coordinating a Meshtastic-style, ad-hoc operation (details in the Repeat Mode section).
+### ⚠️ Companion Repeat Mode ⚠️
+**Leave Companion Repeat Mode Off** unless you are coordinating a Meshtastic-style, ad-hoc operation (details in the Repeat Mode section).
 
 ---
 
-## Public Info (All Devices)
+## Public Info
 
 ### Node Naming
 You will probably want to change the name of your companion device. This is optional but recommended. Use a prefix so others can identify which devices you own.
@@ -109,8 +105,6 @@ Examples:
 - GBXXXX (Discord username initials)
 - PNS_XXXX (location)
 - _WPR_XXXX (callsign)
-
-Tip: Keep names short and readable. If your community starts standardizing naming later, you can update this section with the official convention.
 
 ---
 
@@ -126,7 +120,7 @@ Non-companion devices can automatically advertise their information to the mesh.
 
 In very dense areas, some communities recommend flood adverts at **24 hours or more**. We’re not at that density yet, so these lower intervals are fine for now and can be increased later if needed.
 
-### Recommended Advert Settings ⭐ Recommended
+### Recommended Advert Settings
 | Advert type | Interval |
 |---|---|
 | Auto Advert (Zero Hop) | **60 minutes** |
@@ -180,11 +174,10 @@ This allows manual contact adding, rather than waiting for an advert. There are 
   Find a repeater and add it to your contacts before you hear an advert.  
   Note: this doesn’t make it work unless you’re actually in range—**Discover Nearby Nodes** is often the better strategy.
 
-### Managing contacts - Recommended tips
+### Managing contacts
 - In the **Contacts tab** (lower left), you can search, filter, and sort your contacts.
 - You can set a **custom name** for someone else’s node:  
-  open their **⋮** → **Details** → edit name with the **pencil** icon.  
-  Only you can see your custom names.
+  open their **⋮** → **Details** → edit name with the **pencil** icon. Only you can see your custom names.
 
 ### Auto-add behavior (optional)
 If you do not want all nodes/devices to be auto-added:
@@ -205,7 +198,7 @@ To manually add contacts:
 
 ---
 
-## Companion Repeat Mode (Advanced) ⚠️
+## Companion Repeat Mode (Advanced)
 **MeshCore v1.13.0+**
 
 By default, MeshCore companions **do not relay** other users’ traffic. This reduces congestion and relies on dedicated repeaters/room servers for forwarding.
@@ -219,17 +212,6 @@ If you enable companion Repeat Mode:
 - You must use **918 MHz** when Repeat Mode is enabled  
 - You must **type it in** and apply the settings  
 - You must coordinate and match settings with the other users you want to mesh with  
-
----
-
-## Join Test (Verify Your Setup)
-After saving settings and rebooting:
-
-### Basic checks
-- You can connect in the app without errors (or errors clear after an app restart)
-- Run **Tools → Discover Nearby Nodes**
-- You see at least one nearby repeater/room server (if in range)
-- Send a test message in the Public Channel and see if additional nodes repeat your message "Heard 2 Repeats"
 
 ---
 
@@ -248,10 +230,11 @@ After saving settings and rebooting:
 - Re-check the **Required RF Profile** values (frequency/bandwidth/SF/CR)
 - Ensure you have an antenna attached to the correct RF port
 - Verify you saved settings and the radio rebooted
+- Try increasing the height at which your radio can Tx/Rx from
 
-### “I can see nodes but DMs don’t work”
+### “DMs don’t work”
 - Both devices must have each other added as contacts
-- Confirm you’re messaging the correct contact (custom names help)
+- Both users must be active on the mesh - DMs are not saved when the recipient is offline
 
 ---
 
