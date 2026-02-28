@@ -1,9 +1,10 @@
 # NorthWest Florida Mesh Configuration Guide (In Work)
 
 ## Information
-- Last updated: [2026-02-27]
-- Applies to: Meshcore 1.12.0 - 1.13.0
+- Last updated: [FEB 27, 2026]
+- Applies to: Meshcore 1.13.0
 - Discord: Emerald Coast Mesh - https://discord.gg/yQMvhzMgHY
+- Locations: Escambia, Santa Rosa, Okaloosa, and Walton Counties
 
 ## Purpose
 
@@ -26,30 +27,33 @@ Certain menu items are only available on either companions or repeaters/room ser
   - Bandwidth: 62.5 kHz
   - Spreading Factor: 7
   - **Coding Rate: 8**
-  - Do not Enable Repeat Mode, unless you do not want to participate in the mesh. More on this below.
 
-The only recommended modification is to the Coding Rate. By inreasing from 5 -> 8, additional error corrections are implemented to improve long range connections and resist noise at the cost of data speed. In the future the area may get saturated with devices; This recommendation would change to a lower value to reduce congestion. Devices CAN communicate with eachother when the Coding Rate value is different. 
+The only recommended modification is to the Coding Rate. By inreasing from 5 -> 8, additional error corrections are implemented to improve long range connections and resist noise at the cost of data speed. In the future the area may get saturated with devices; This recommendation would change to a lower value to reduce congestion. Devices CAN communicate with eachother when the Coding Rate value is different. Do not Enable Repeat Mode (Only a companion option) unless you do not want to participate in the mesh. More on this below.
 
 ### Public Info - All Devices
 You will probably want to change the name of your companion device. It is optional but recommended to use some sort of prefix to identify which devices you own. Examples:
-- 🟢 RPTRXX (Emojis)
-- GB01 (Discord Username Initials)
-- PNSx (Location)
-- _WPR_ NodeName (Callsign)
+- 🟢 XXXX (Emojis)
+- GBXXXX (Discord Username Initials)
+- PNS_XXXX (Location)
+- _WPR_XXXX (Callsign)
 
-### Advert Intervals - Repeater + Room Server
+### Advert Intervals - Repeater + Room Server Only
 
 Non-Companion devices can automatically advertize their information to other users on the mesh. These values are recommended to be low while our mesh is still growing, which allows repeaters and room servers to be automatically discovered by other nodes. Zero Hop Adverts are the nodes in line of sight of eachother, these messages do not repeat. Flood adverts are sent through every available repeater. In very dense areas, they recommend 24 hours or more. We don't have that problem, and can adjust in the future once the mesh is larger.
 
 - Auto Advert (Zero Hop): 60 Minutes
 - Auto Advert (Flood): 3 Hours
 
+# iOS/Android/Web App Usage
+
+### Connecting
+
 ### Menu ⋮ 
 - Tools -> Discover Nearby Nodes: This will have your compoanion send out an advert and listen for responding repeaters or sensors. This is the recommended first step after configuring your device.
 - Internet Map: This will show nodes who's details have been uploaded. It is recommended to finish configuring the devices, particularly the location before sharing.
 
 
-### Contacts
+### Contacts - Companion
 - Menu ⋮ -> Add Contact: This allows for manual contact adding, in lieu of waiting for an advert. There are 3 ways to import a contact.
   - Manual: You will need to choose the contact type (Chat, Repeater, Room Server, or Sensor) along with the name and Public Key.
   - Import from Clipboard Link: Most common method for sharing over text messages to friends. Copy the URL provided, and the import button will paste it from your clipboard and add the contact. You can import repeaters, room servers, companions, and private channels.
