@@ -1,9 +1,10 @@
 # NorthWest Florida Mesh Configuration Guide (Work In Progress)
 
 ## Information
-- **Last updated:** Feb 27, 2026  
-- **Applies to:** MeshCore **v1.13.0**  
-- **Discord:** Emerald Coast Mesh — https://discord.gg/yQMvhzMgHY  
+- **Last updated:** May 5, 2026  
+- **Applies to:** MeshCore **v1.13.0 & 1.14.0**  
+- **Discord:** Emerald Coast Mesh — https://ecmesh.us
+- **Node Map:** https://map.ecmesh.us
 - **Coverage area:** Escambia, Santa Rosa, Okaloosa, and Walton Counties  
 
 ---
