@@ -1,8 +1,8 @@
 # NorthWest Florida Mesh Configuration Guide (Work In Progress)
 
 ## Information
-- **Last updated:** March 3, 2026  
-- **Applies to:** MeshCore **v1.13.0 & 1.14.0**  
+- **Last updated:** March 15, 2026  
+- **Applies to:** MeshCore **v1.12 & 1.13.0 & 1.14.0**  
 - **Discord:** Emerald Coast Mesh — https://ecmesh.us
 - **Node Map:** https://map.ecmesh.us
 - **Coverage area:** Escambia, Santa Rosa, Okaloosa, and Walton Counties  
@@ -23,30 +23,31 @@ Equipment damage may occur if a proper antenna is not attached before powering o
 - [Purpose](#purpose)
 - [Quick Start](#quick-start)
 - [Required Local Settings](#required-local-settings)
-- [Public Info](#public-info-all-devices)
+- [Public Info](#public-info)
 - [Advert Intervals](#advert-intervals-repeater--room-server-only)
 - [App Usage](#ios--android--web-app-usage)
 - [Contacts](#contacts)
-- [Repeat Mode](#companion-repeat-mode-advanced-️)
+- [Repeat Mode](#companion-repeat-mode-advanced)
 - [Troubleshooting](#troubleshooting-common-issues)
 
 ---
 
 ## Quick Start
 
-### Quick Start (Companion / Personal Node)
-1. **Set Preset:** USA/Canada
+### Quick Start (Companion)
+1. **Set Preset:** USA/Canada (910.525MHz)
 2. **Change Coding Rate:** 8 
 3. **Set your device name**
 4. **Discover Repeaters** **Tools → Discover Nearby Nodes**
 5. **Send a message to the Public room**
 
 ### Quick Start (Repeater / Room Server)
-1. **Connect to newly flashed repeater over USB**
-1. **Set Preset:** USA/Canada
+1. **Connect to newly flashed repeater/room server over USB**
+1. **Set Preset:** USA/Canada (910.525MHz)
 2. **Change Coding Rate:** 8 
 3. **Set Advert Intervals:** 60 Min / 3 Hour
-4. Verify discovery via **Tools → Discover Nearby Nodes** from a companion
+4. **Send Flood Advert**
+5. Verify discovery via **Tools → Discover Nearby Nodes** from a companion
 
 ---
 
@@ -55,7 +56,7 @@ Some menu items only appear on companions, repeaters, or room servers.
 
 - **Companion**  
   The device that connects to your phone or computer via **Bluetooth/USB**.  
-  - Companions **do not re-broadcast** received messages by default (unlike Meshtastic).  
+  - Companions **do not re-broadcast** received messages by default (WhisperOS is an exception).  
   - Companions **do not auto-advertise** by default to reduce congestion.
 
 - **Repeater**  
@@ -99,13 +100,13 @@ Increasing Coding Rate from **5 → 8** applies additional error correction to i
 ## Public Info
 
 ### Node Naming
-You will probably want to change the name of your companion device. This is optional but recommended. Use a prefix so others can identify which devices you own.
+You will probably want to change the name of your devices. Using a prefix is optional but recommended, so others can identify which devices you own.
 
 Examples:
 - 🟢 XXXX (emoji prefix)
-- GBXXXX (Discord username initials)
+- GOTB_XXXX (Discord username initials)
 - PNS_XXXX (location)
-- _WPR_XXXX (callsign)
+- _WPR_XXXX (Other)
 
 ---
 
@@ -116,8 +117,8 @@ An **advert** is a periodic broadcast of a node’s public info so other users c
 
 Non-companion devices can automatically advertise their information to the mesh. These values are recommended while our mesh is still growing so repeaters and room servers are easier to discover.
 
-- **Zero Hop adverts**: only reach nodes in direct range; they **do not get repeated**.  
-- **Flood adverts**: propagate through repeaters across the mesh.
+- **Zero Hop adverts**: Only reaches nodes in direct range; **Zero Hop do not get repeated**.  
+- **Flood adverts**: Propagate through repeaters across the mesh.
 
 In very dense areas, some communities recommend flood adverts at **24 hours or more**. We’re not at that density yet, so these lower intervals are fine for now and can be increased later if needed.
 
@@ -243,3 +244,4 @@ If you enable companion Repeat Mode:
 | Date | Version | Changes |
 |---|---|---|
 | Feb 27, 2026 | Draft | Initial draft formatting + local settings |
+| Mar 15, 2026 | Revised | Updated information |
